@@ -10,29 +10,28 @@ const {
 } = require('../../controllers/thought-controller');
 const { route } = require('./user-routes');
 
-// /api/thoughts
+// /api/thoughts GET
 router.route('/').get(getAllThoughts);
 
-// /api/thoughts/<userId>
+// /api/thoughts/ "USER ID TO POST THOUGHT"
 router.route('/:userId').post(addThought);
 
-// /api/thoughts/<thoughtId>
+// /api/thoughts/the thought id thats in the DB
 router
     .route('/:thoughtId')
     .get(getThoughtById)
     .put(updateThought)
 
-// /api/thoughts/<userId>/<thoughtId>
+
 router
     .route('/:userId/:thoughtId')
     .delete(removeThought);
 
-// /api/thoughts/<thoughtId>/reactions
 router
     .route('/:thoughtId/reactions')
     .post(addReaction);
 
-// /api/<thoughtId>/reactions/<reactionId>
+    // api/thoughts/ thought id from db/reactions/ reaction id from DB
 router
     .route('/:thoughtId/reactions/:reactionId')
     .delete(removeReaction);
