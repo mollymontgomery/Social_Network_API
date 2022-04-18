@@ -1,7 +1,7 @@
 # Social_Network_API
 
   ## Description
-  This is an API for a social network web application. This application allows users to share their thoughts, react to friends thoughs and create a friends list.
+  This is an API for a social network web application. This application allows users to share their thoughts, react to friends thoughts and create a friends list.
 
 
   ## Table of Contents
